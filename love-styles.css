@@ -1,0 +1,64 @@
+.love-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.love-item {
+    background: rgba(255, 105, 180, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 200px;
+}
+
+.love-item:hover {
+    transform: scale(1.05);
+    background: rgba(255, 105, 180, 0.2);
+}
+
+.love-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.love-item p {
+    font-family: 'Loved by the King', cursive;
+    font-size: 1.2em;
+    color: #fff;
+    margin: 0;
+}
+
+.love-item.expanded {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.love-item.expanded img {
+    max-width: 50%;
+}
+
+.love-item.expanded p {
+    font-size: 1.5em;
+}
+
+@media (max-width: 768px) {
+    .love-item.expanded {
+        flex-direction: column;
+    }
+
+    .love-item.expanded img {
+        max-width: 100%;
+    }
+}

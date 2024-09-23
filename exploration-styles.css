@@ -1,0 +1,87 @@
+.exploration-container {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.world-map, .bucket-list, .quote-generator {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+}
+
+#map {
+    height: 300px;
+    border-radius: 10px;
+}
+
+.bucket-list ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+}
+
+.bucket-list li {
+    background: rgba(255, 255, 255, 0.1);
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bucket-list li button {
+    background: none;
+    border: none;
+    color: #ff69b4;
+    cursor: pointer;
+}
+
+.add-item {
+    display: flex;
+    margin-top: 20px;
+}
+
+.add-item input {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.add-item button {
+    border-radius: 0 5px 5px 0;
+}
+
+#quote {
+    font-style: italic;
+    margin: 20px 0;
+}
+
+button {
+    background-color: #ff1493;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff69b4;
+}
+
+@media (min-width: 768px) {
+    .exploration-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .world-map {
+        grid-column: span 2;
+    }
+}

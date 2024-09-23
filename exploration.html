@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploration - Happy Birthday Breda</title>
+    <link href="https://fonts.googleapis.com/css2?family=Loved+by+the+King&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="exploration-styles.css">
+</head>
+<body>
+    <section id="exploration-section" class="section">
+        <div class="stars"></div>
+        <h1>Exploration</h1>
+        <div class="exploration-container">
+            <div class="world-map">
+                <h2>Places You've Been!</h2>
+                <div id="map"></div>
+            </div>
+            <div class="bucket-list">
+                <h2> Adventure Bucket List</h2>
+                <ul id="bucket-list-items"></ul>
+                <div class="add-item">
+                    <input type="text" id="new-item" placeholder="Add a new adventure...">
+                    <button id="add-item-btn">Add</button>
+                </div>
+            </div>
+            <div class="quote-generator">
+                <h2>Inspiration for the Journey</h2>
+                <p id="quote"></p>
+                <button id="new-quote-btn">New Quote</button>
+            </div>
+        </div>
+        <a href="index.html#links-section" class="back-button">Back to Home</a>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="script.js"></script>
+    <script src="exploration-script.js"></script>
+</body>
+</html>

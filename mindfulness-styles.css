@@ -1,0 +1,63 @@
+.mindfulness-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 20px;
+}
+
+.breathing-exercise, .video-container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.breath-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #ff69b4, #ff1493);
+    margin: 20px auto;
+    opacity: 0.7;
+}
+
+.breath-instruction {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #ff1493;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff69b4;
+}
+
+#video-placeholder {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    height: 315px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .mindfulness-container {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+    }
+}

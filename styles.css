@@ -1,0 +1,314 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+    font-size: 18px; /* Increased base font size */
+
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 5vh 5vw; /* Adjusted padding */
+    box-sizing: border-box;
+    position: relative;
+}
+
+h1, h2 {
+    font-family: 'Loved by the King', cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+}
+
+p {
+    font-family: 'Loved by the King', cursive; 
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2em;
+}
+
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 50px 160px, #ddd, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 90px 40px, #fff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 130px 80px, #fff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 160px 120px, #ddd, rgba(0,0,0,0));
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    animation: twinkle 5s infinite;
+    z-index: -1;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.5; }
+    50% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+.placeholder {
+    background: linear-gradient(45deg, #ff69b4, #ff1493, #ff69b4);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.flower-emoji {
+    font-size: 4em;
+    animation: wave 2s infinite;
+}
+
+@keyframes wave {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.countdown-led {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-family: 'Orbitron', sans-serif;
+    margin-top: 30px;
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.countdown-value {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #ff1493;
+    text-shadow: 0 0 10px #ff69b4;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px 20px;
+    border-radius: 10px;
+    min-width: 100px;
+    text-align: center;
+}
+
+.countdown-label {
+    font-size: 1rem;
+    color: #fff;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .countdown-led {
+        flex-wrap: wrap;
+    }
+
+    .countdown-value {
+        font-size: 3rem;
+        min-width: 80px;
+    }
+}
+
+
+
+#countdown-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+#tree-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+#tree {
+    width: 100%;
+    height: 100%;
+}
+
+
+#links-section {
+    padding: 40px 20px;
+}
+
+#links-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+.link-card {
+    position: relative;
+    height: 200px;
+    background: linear-gradient(135deg, #ff69b4, #ff1493);
+    border-radius: 20px;
+    overflow: hidden;
+    text-decoration: none;
+    color: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.link-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.link-icon {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.link-text {
+    font-family: "Loved by the King", cursive;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.link-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.link-card:hover .link-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    #links-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    
+    .link-card {
+        height: 150px;
+    }
+    
+    .link-icon {
+        font-size: 2em;
+    }
+    
+    .link-text {
+        font-size: 1.2em;
+    }
+}
+.placeholder {
+    background: linear-gradient(45deg, #ff69b4, #ff1493, #ff69b4);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+    max-width: 95%; /* Increased from 90% to 95% */
+    margin: 0 auto;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  #flower-garden {
+    width: 40%; /* Reduced from 50% to 40% */
+    height: 0;
+    padding-bottom: 40%; /* Maintain square aspect ratio */
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  #flower-garden svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .poem {
+    width: 60%; /* Increased from 50% to 60% */
+    font-family: 'Loved by the King', cursive;
+    font-size: 1.1em; /* Slightly reduced font size */
+    color: #fff;
+    text-align: left;
+    line-height: 1.4; /* Slightly reduced line height */
+    column-count: 2; /* Split the poem into two columns */
+    column-gap: 20px;
+  }
+  
+  @media (max-width: 1024px) {
+    .poem {
+      column-count: 1; /* Revert to single column on smaller screens */
+      font-size: 1em;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .content-wrapper {
+      flex-direction: column;
+    }
+    
+    #flower-garden, .poem {
+      width: 100%;
+    }
+    
+    #flower-garden {
+      padding-bottom: 100%; /* Full width on mobile */
+    }
+  }
+
+  .back-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff1493;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #ff69b4;
+}
